@@ -25,8 +25,8 @@ $(function () {
     		function (characters) {
         		// Do something with the character list.
         		characters.forEach(function (character) {
-    			    $("body").append($("<div></div>").text(" Character ID: " + character.id + " ClassType: " + character.classType +
-                                    " Gender: " + character.gender));
+    			    $("#character-list").append(" · " + "Character ID: " + character.id + " ClassType: " + character.classType +
+                                    " Gender: " + character.gender + " Money: " + character.money + " Name: " + character.name + "<p></p>");
         		});
     		}
 		);
