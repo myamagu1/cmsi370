@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-	<head>
+    <head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,57 +10,69 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	</head>
+	
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12"><h2>Welcome to Diabolical!</h2></div>
+				<div class="col-xs-6"><h2>Welcome to Diabolical!</h2></div>
 			</div>
 
 			<div class="row">
-				<div class="form-group">
-					<h3>Display a list of current characters <h3/>
+				<div class="form-group"  class="col-xs-6">
+					<h3>• Display a list of current characters<h3/>
 
-    				<button id="search-button" type="button" class="btn btn-success">Current Characters</button></p>
+    				<button id="search-button" type="button" class="btn btn-success" style="width: 500px;">View</button></p>
     				
-    				<div class="col-xs-12">
-    					<table class="table table-hover table-striped" id="table">
-						</table>				
+    				<div class="col-xs-6">
+    					<table class="table table-hover table-striped" id="table"></table>				
 					</div>
   				</div>
   			</div>
 
   			<div class="row">
-  				<div class="form-group">
-					<h3>Spawn/create a new character <h3/>
+  				<div class="form-group" class="col-xs-6">
+					<h3>• Spawn/create a new character <h3/>
 
-					  <div class="form-group" style="width: 300px;">
-					  	<label for="characterId">Character ID</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="characterId"><font size="4">Character ID:</font></label>
 					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
 					  </div>
-					  <div class="form-group" style="width: 300px;">
-					    <label for="classType">Class Type</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="classType"><font size="4">Class Type:</font></label>
 					    <input type="classType" class="form-control" id="classType" placeholder="Class Type">
 					  </div>
-					  <div class="form-group" style="width: 300px;">
-					    <label for="gender">Gender</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="gender"><font size="4">Gender:</font></label>
 					    <input type="gender" class="form-control" id="gender" placeholder="Gender">
 					  </div>
-					  <div class="form-group" style="width: 300px;">
-					    <label for="level">Level</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="level"><font size="4">Level:</font></label>
 					    <input type="level" class="form-control" id="level" placeholder="Level">
 					  </div>
-					  <div class="form-group" style="width: 300px;">
-					    <label for="money">Money</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="money"><font size="4">Money:</font></label>
 					    <input type="money" class="form-control" id="money" placeholder="Money">
 					  </div>
-					  <div class="form-group" style="width: 300px;">
-					    <label for="name">Name</label>
+					  <div class="form-group" style="width: 500px;">
+					    <label for="name"><font size="4">Name:</font></label>
 					    <input type="name" class="form-control" id="name" placeholder="Name">
 					  </div>
 
-					  <button type="button" class="btn btn-success">Create</button>
+					  <button type="button" class="btn btn-success" style="width: 500px;">Create</button>
 				</div>
   			</div>
+
+  			<div class="row">
+				<div class="form-group"  class="col-xs-6">
+					<h3>• Search a character by ID<h3/>
+
+					<div class="form-group" style="width: 500px;">
+					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
+					</div>
+
+					<button id="search-button" type="button" class="btn btn-success" style="width: 500px;">Search</button></p>
+				</div>
+			</div>
 		</div>
 
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
