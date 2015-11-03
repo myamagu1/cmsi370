@@ -14,11 +14,11 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6"><h2>Welcome to Diabolical!</h2></div>
+				<div class="col-xs-12" class="col-md-8"><h2>Welcome to Diabolical!</h2></div>
 			</div>
 
 			<div class="row">
-				<div class="form-group"  class="col-xs-6">
+				<div class="form-group"  class="col-xs-12" class="col-md-8">
 					<h3>• Display a list of current characters<h3/>
 
     				<button id="search-button" type="button" class="btn btn-success" style="width: 500px;">View</button></p>
@@ -30,30 +30,30 @@
   			</div>
 
   			<div class="row">
-  				<div class="form-group" class="col-xs-6">
+  				<div class="form-group" class="col-xs-12" class="col-md-8">
 					<h3>• Spawn/create a new character <h3/>
 
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="characterId"><font size="4">Character ID:</font></label>
 					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
 					  </div>
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="classType"><font size="4">Class Type:</font></label>
 					    <input type="classType" class="form-control" id="classType" placeholder="Class Type">
 					  </div>
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="gender"><font size="4">Gender:</font></label>
 					    <input type="gender" class="form-control" id="gender" placeholder="Gender">
 					  </div>
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="level"><font size="4">Level:</font></label>
 					    <input type="level" class="form-control" id="level" placeholder="Level">
 					  </div>
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="money"><font size="4">Money:</font></label>
 					    <input type="money" class="form-control" id="money" placeholder="Money">
 					  </div>
-					  <div class="form-group" style="width: 500px;">
+					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="name"><font size="4">Name:</font></label>
 					    <input type="name" class="form-control" id="name" placeholder="Name">
 					  </div>
@@ -63,14 +63,66 @@
   			</div>
 
   			<div class="row">
-				<div class="form-group"  class="col-xs-6">
+				<div class="form-group"  class="col-xs-12" class="col-md-8">
 					<h3>• Search a character by ID<h3/>
 
-					<div class="form-group" style="width: 500px;">
-					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <input type="id" class="form-control" id="viewCharacter" placeholder="Character ID">
 					</div>
 
-					<button id="search-button" type="button" class="btn btn-success" style="width: 500px;">Search</button></p>
+					<button id="view-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Search</button></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group"  class="col-xs-12" class="col-md-8">
+					<h3>• Modify a character<h3/>
+
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="characterId"><font size="4">Character ID:</font></label>
+					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
+					</div>
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="classType"><font size="4">Class Type:</font></label>
+					    <input type="classType" class="form-control" id="classType" placeholder="Class Type">
+					</div>
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="gender"><font size="4">Gender:</font></label>
+					    <input type="gender" class="form-control" id="gender" placeholder="Gender">
+					</div>
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="level"><font size="4">Level:</font></label>
+					    <input type="level" class="form-control" id="level" placeholder="Level">
+					</div>
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="money"><font size="4">Money:</font></label>
+					    <input type="money" class="form-control" id="money" placeholder="Money">
+					</div>
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <label for="name"><font size="4">Name:</font></label>
+					    <input type="name" class="form-control" id="name" placeholder="Name">
+					</div>
+
+					<button id="modify-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Modify</button></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group"  class="col-xs-12" class="col-md-8">
+					<h3>• Delete a character by ID<h3/>
+
+					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
+					    <input type="id" class="form-control" id="viewCharacter" placeholder="Character ID">
+					</div>
+
+					<button id="view-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Delete</button></p>
+				</div>
+			</div>
+
+			<div class="form-group"  class="col-xs-12" class="col-md-8">
+				<h3>• Spawn a random item<h3/>
+
+					<button id="view-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Spawn</button></p>
 				</div>
 			</div>
 		</div>
