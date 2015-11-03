@@ -34,31 +34,27 @@
 					<h3>• Spawn/create a new character <h3/>
 
 					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="characterId"><font size="4">Character ID:</font></label>
-					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
-					  </div>
-					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="classType"><font size="4">Class Type:</font></label>
-					    <input type="classType" class="form-control" id="classType" placeholder="Class Type">
+					    <input type="text" class="form-control" id="classType" placeholder="Class Type">
 					  </div>
 					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="gender"><font size="4">Gender:</font></label>
-					    <input type="gender" class="form-control" id="gender" placeholder="Gender">
+					    <input type="text" class="form-control" id="gender" placeholder="Gender">
 					  </div>
 					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="level"><font size="4">Level:</font></label>
-					    <input type="level" class="form-control" id="level" placeholder="Level">
+					    <input type="text" class="form-control" id="level" placeholder="Level">
 					  </div>
 					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="money"><font size="4">Money:</font></label>
-					    <input type="money" class="form-control" id="money" placeholder="Money">
+					    <input type="text" class="form-control" id="money" placeholder="Money">
 					  </div>
 					  <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="name"><font size="4">Name:</font></label>
-					    <input type="name" class="form-control" id="name" placeholder="Name">
+					    <input type="text" class="form-control" id="name" placeholder="Name">
 					  </div>
 
-					  <button type="button" class="btn btn-success" style="width: 500px;">Create</button>
+					  <button id="create-button" type="button" class="btn btn-success" style="width: 500px;">Create</button>
 				</div>
   			</div>
 
@@ -80,27 +76,27 @@
 
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="characterId"><font size="4">Character ID:</font></label>
-					    <input type="id" class="form-control" id="characterId" placeholder="Character ID">
+					    <input type="text" class="form-control" id="characterId2" placeholder="Character ID">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="classType"><font size="4">Class Type:</font></label>
-					    <input type="classType" class="form-control" id="classType" placeholder="Class Type">
+					    <input type="text" class="form-control" id="classType2" placeholder="Class Type">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="gender"><font size="4">Gender:</font></label>
-					    <input type="gender" class="form-control" id="gender" placeholder="Gender">
+					    <input type="text" class="form-control" id="gender2" placeholder="Gender">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="level"><font size="4">Level:</font></label>
-					    <input type="level" class="form-control" id="level" placeholder="Level">
+					    <input type="text" class="form-control" id="level2" placeholder="Level">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="money"><font size="4">Money:</font></label>
-					    <input type="money" class="form-control" id="money" placeholder="Money">
+					    <input type="text" class="form-control" id="money2" placeholder="Money">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <label for="name"><font size="4">Name:</font></label>
-					    <input type="name" class="form-control" id="name" placeholder="Name">
+					    <input type="text" class="form-control" id="name2" placeholder="Name">
 					</div>
 
 					<button id="modify-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Modify</button></p>
@@ -119,12 +115,14 @@
 				</div>
 			</div>
 
-			<div class="form-group"  class="col-xs-12" class="col-md-8">
-				<h3>• Spawn a random item<h3/>
+			<div class="row">
+				<div class="form-group"  class="col-xs-12" class="col-md-8">
+					<h3>• Spawn a random item<h3/>
 
 					<button id="view-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Spawn</button></p>
 				</div>
 			</div>
+
 		</div>
 
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
