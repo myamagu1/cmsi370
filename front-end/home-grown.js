@@ -15,6 +15,10 @@ $(function () {
 		);
 	});
 
+    $("#close-button").click(function() {
+        $("#table").empty();
+    });
+
     $("#create-button").click(function () {
         $.ajax({
             type: 'POST',
@@ -46,6 +50,10 @@ $(function () {
                                         "<td>" + character.name + "</td>" + "</tr>");
             }
         );
+    });
+
+    $("#close-button2").click(function() {
+        $("#table2").empty();
     });
 
     $("#modify-button").click(function () {
