@@ -16,34 +16,26 @@ $(function () {
 	});
 
     $("#create-button").click(function () {
-        $.ajax({
-            type: 'POST',
-            url: "http://lmu-diabolical.appspot.com/characters",
-            data: JSON.stringify({
-                name: $("#name").val(),
-                classType: $("#classType").val(),
-                gender: $("#gender").val(),
-                level: $("#level").val(),
-                money: $("#money").val()
-            }),
-            contentType: "application/json",
-            dataType: "json",
-            accept: "application/json",
-            complete: function (jqXHR, textStatus) {
-                // The new character can be accessed from the Location header.
-                window.alert("You may access the new character at:" +
-                    jqXHR.getResponseHeader("Location"));
-            }
-        });
-    });
-
-    $("#create-button").click(function () {
-        $.ajax({
-            type: 'DELETE',
-            url: "http://lmu-diabolical.appspot.com/characters/5891733057437696",
-            success: function (data, textStatus, jqXHR) {
-                console.log("Gone baby gone.");
-            }
+        $("#create-button").click(function () {
+            $.ajax({
+                type: 'POST',
+                url: "http://lmu-diabolical.appspot.com/characters",
+                data: JSON.stringify({
+                    name: $("#name").val(),
+                    classType: $("#classType").val(),
+                    gender: "MALE",
+                    level: $("#level").val(),
+                    money: $("#money").val()
+                }),
+                contentType: "application/json",
+                dataType: "json",
+                accept: "application/json",
+                complete: function (jqXHR, textStatus) {
+                    // The new character can be accessed from the Location header.
+                    window.alert("You may access the new character at:" +
+                        jqXHR.getResponseHeader("Location"));
+                }
+            });
         });
     });
 });
