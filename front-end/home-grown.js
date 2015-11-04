@@ -79,5 +79,19 @@ $(function () {
             }
         });
     });
+
+    $("#random-button").click(function () {
+        $.getJSON(
+            "http://lmu-diabolical.appspot.com/items/spawn",
+            {
+                level: $("#level3").val(),
+                slot: $("#slot").val()
+            },
+            function (item) {
+                // Mmmmm, new item.
+                console.log(item);
+            }
+        );
+    });
 });
 
