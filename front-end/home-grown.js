@@ -69,5 +69,15 @@ $(function () {
             }
         });
     });
+
+    $("#delete-button").click(function () {
+        $.ajax({
+            type: 'DELETE',
+            url: "http://lmu-diabolical.appspot.com/characters/" + $("#deleteCharacter").val(),
+            success: function (data, textStatus, jqXHR) {
+                console.log("Gone baby gone.");
+            }
+        });
+    });
 });
 
