@@ -22,7 +22,7 @@ $(function () {
             data: JSON.stringify({
                 name: $("#name").val(),
                 classType: $("#classType").val(),
-                gender: "MALE",  // $("#gender").val(),
+                gender: $("#gender").val(),
                 level: $("#level").val(),
                 money: $("#money").val()
             }),
@@ -56,7 +56,7 @@ $(function () {
                 id: $("#characterId2").val(),
                 name: $("#name2").val(),
                 classType: $("#classType2").val(),
-                gender: "MALE", //$("#gender2").val(),
+                gender: $("#gender2").val(),
                 level: $("#level2").val(),
                 money: $("#money2").val()
             }),
