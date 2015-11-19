@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8"> <!-- JD: 1 -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>home-grown</title>
@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	</head>
 	
-	<body><center>
+	<body><center> <!-- JD: 2 -->
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12" class="col-md-8"><h2>Welcome to Diabolical!</h2></div>
@@ -19,58 +19,64 @@
 
 			<div class="row">
 				<div class="form-group"  class="col-xs-12" class="col-md-8">
-					<h3>• Display a list of current characters<h3/>
+					<h3>• Display a list of current characters<h3/> <!-- JD: 3 -->
 
+                    <!-- JD: 4, 7 -->
     				<button id="view-button" type="button" class="btn btn-success" style="width: 500px;">Show</button></p>
     				<button id="close-button" type="button" class="btn btn-success" style="width: 500px;">Hide</button></p>
     				
     				<div class="col-xs-6">
-    					<table class="table table-hover table-striped" id="table"></table>				
+    					<table class="table table-hover table-striped" id="table"></table> <!-- JD: 5 -->
 					</div>
   				</div>
   			</div>
 
   			<div class="row">
   				<div class="form-group" class="col-xs-12" class="col-md-8">
-					<h3>• Spawn/create a new character <h3/>
-
+					<h3>• Spawn/create a new character <h3/> <!-- JD: 3 -->
+                        <!-- JD: 4, 6 -->
 						<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-						    <label for="classType"><font size="4">Class Type:</font></label>
+						    <label for="classType"><font size="4">Class Type:</font></label> <!-- JD: 2 -->
 						    <input type="text" class="form-control" id="classType" placeholder="Enter a Class Type">
 					    </div>
 					    <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    	<label for="gender"><font size="4">Gender:</font></label>
+					    	<label for="gender"><font size="4">Gender:</font></label> <!-- JD: 2 -->
 					    	<input type="text" class="form-control" id="gender" placeholder="Enter Gender">
 					    </div>
 					    <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    	<label for="level"><font size="4">Level:</font></label>
+					    	<label for="level"><font size="4">Level:</font></label> <!-- JD: 2 -->
 					    	<input type="text" class="form-control" id="level" placeholder="Enter Level">
 					    </div>
 					    <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    	<label for="money"><font size="4">Money:</font></label>
+					    	<label for="money"><font size="4">Money:</font></label> <!-- JD: 2 -->
 					    	<input type="text" class="form-control" id="money" placeholder="Enter Money">
 					    </div>
 					    <div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    	<label for="name"><font size="4">Name:</font></label>
+					    	<label for="name"><font size="4">Name:</font></label> <!-- JD: 2 -->
 					    	<input type="text" class="form-control" id="name" placeholder="Enter Name">
 					  	</div>
 
-					    <button id="create-button" type="button" class="btn btn-success" style="width: 500px;">Create</button></P>
+                        <!-- JD: 4, 6 -->
+					    <button id="create-button" type="button" class="btn btn-success" style="width: 500px;">Create</button></P> <!-- JD: 7 -->
 				</div>
   			</div>
 
   			<div class="row">
 				<div class="form-group"  class="col-xs-12" class="col-md-8">
-					<h3>• Search a character by ID<h3/>
+					<h3>• Search a character by ID<h3/> <!-- JD: 3 -->
 
+                    <!-- JD: 4, 6 -->
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <input type="text" class="form-control" id="searchCharacter" placeholder="Enter Character ID">
 					</div>
 
-					<button id="search-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Search</button></p>
+                    <!-- JD: 4, 6 -->
+					<button id="search-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Search</button></p> <!-- JD: 7 -->
+                    <!-- JD: 4, 6, 7, 8 -->
 					<button id="close-button2" type="button" class="btn btn-success" style="width: 500px;">Hide Result</button></p>
 
 					<div class="col-xs-6">
+                        <!-- JD: 2, 9 -->
     					<table class="table table-hover table-striped" id="table2" align="center"></table>				
 					</div>
 				</div>
@@ -78,61 +84,73 @@
 
 			<div class="row">
 				<div class="form-group"  class="col-xs-12" class="col-md-8">
-					<h3>• Modify a character<h3/>
+					<h3>• Modify a character<h3/> <!-- JD: 3, 10 -->
 
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="characterId"><font size="4">Character ID:</font></label>
+					    <label for="characterId"><font size="4">Character ID:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="characterId2" placeholder="Enter Character ID">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="classType"><font size="4">Class Type:</font></label>
+					    <label for="classType"><font size="4">Class Type:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="classType2" placeholder="Enter Class Type">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="gender"><font size="4">Gender:</font></label>
+					    <label for="gender"><font size="4">Gender:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="gender2" placeholder="Enter Gender">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="level"><font size="4">Level:</font></label>
+					    <label for="level"><font size="4">Level:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="level2" placeholder="Enter Level">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="money"><font size="4">Money:</font></label>
+					    <label for="money"><font size="4">Money:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="money2" placeholder="Enter Money">
 					</div>
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <label for="name"><font size="4">Name:</font></label>
+					    <label for="name"><font size="4">Name:</font></label> <!-- JD: 2, 11 -->
+                        <!-- JD: 8 -->
 					    <input type="text" class="form-control" id="name2" placeholder="Enter Name">
 					</div>
 
-					<button id="modify-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Modify</button></p>
+                    <!-- JD: 4, 6 -->
+					<button id="modify-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Modify</button></p> <!-- JD: 7 -->
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="form-group"  class="col-xs-12" class="col-md-8">
-					<h3>• Delete a character by ID<h3/>
+					<h3>• Delete a character by ID<h3/> <!-- JD: 3 -->
 
+                    <!-- JD: 4, 6 -->
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <input type="text" class="form-control" id="deleteCharacter" placeholder="Enter Character ID">
 					</div>
 
-					<button id="delete-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Delete</button></p>
+                    <!-- JD: 4, 6 -->
+					<button id="delete-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Delete</button></p> <!-- JD: 7 -->
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="form-group"  class="col-xs-12" class="col-md-8">
-					<h3>• Spawn a random item<h3/>
+					<h3>• Spawn a random item<h3/> <!-- JD: 3 -->
 
+                    <!-- JD: 4, 6 -->
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
-					    <input type="text" class="form-control" id="level3" placeholder="Enter Level">
+					    <input type="text" class="form-control" id="level3" placeholder="Enter Level"> <!-- JD: 8 -->
 					</div>
+                    <!-- JD: 4, 6 -->
 					<div class="form-group" style="width: 500px;" class="col-xs-12" class="col-md-8">
 					    <input type="text" class="form-control" id="slot" placeholder="Enter Slot">
 					</div>
 
-					<button id="random-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Spawn</button></p>
+                    <!-- JD: 4, 6 -->
+					<button id="random-button" type="button" class="btn btn-success" style="width: 500px;" class="col-xs-12" class="col-md-8">Spawn</button></p> <!-- JD: 7 -->
 				</div>
 			</div>
 

@@ -1,12 +1,14 @@
 $(function () {
 
-	$("#view-button").click(function () {
+	$("#view-button").click(function () { // JD: 1
 		$.getJSON(
     		"http://lmu-diabolical.appspot.com/characters",
     		function (characters) {
+                // JD: 12, 13
     			$("#table").append("<tr>" + "<th>Character ID</th>" + "<th>Class Type</th>" + "<th>Gender</th>"
         								+ "<th>Level</th>" + "<th>Money</th>" + "<th>Name</th>" + "</tr>");
         		characters.forEach(function (character) {
+                    // JD: 17
     			    $("#table").append( "<tr>" + "<td>"+ character.id + "</td>" + "<td>" + character.classType + "</td>"
     			    					+ "<td>" + character.gender + "</td>" + "<td>" + character.level + "</td>" + "<td>" + character.money + "</td>" + 
     			    					"<td>" + character.name + "</td>" + "</tr>");
@@ -15,11 +17,12 @@ $(function () {
 		);
 	});
 
-    $("#close-button").click(function() {
-        $("#table").empty();
+    $("#close-button").click(function() { // JD: 15
+        $("#table").empty(); // JD: 14
     });
 
     $("#create-button").click(function () {
+        // JD: 16
         $.ajax({
             type: 'POST',
             url: "http://lmu-diabolical.appspot.com/characters",
@@ -45,6 +48,7 @@ $(function () {
         $.getJSON(
             "http://lmu-diabolical.appspot.com/characters/" + $("#searchCharacter").val(),
             function (character) {
+                // JD: 12, 17
                     $("#table2").append( "<tr>" + "<td>"+ character.id + "</td>" + "<td>" + character.classType + "</td>"
                                         + "<td>" + character.gender + "</td>" + "<td>" + character.level + "</td>" + "<td>" + character.money + "</td>" + 
                                         "<td>" + character.name + "</td>" + "</tr>");
@@ -52,11 +56,12 @@ $(function () {
         );
     });
 
-    $("#close-button2").click(function() {
+    $("#close-button2").click(function() { // JD: 15
         $("#table2").empty();
     });
 
     $("#modify-button").click(function () {
+        // JD: 16
         $.ajax({
             type: 'PUT',
             url: "http://lmu-diabolical.appspot.com/characters/" + $("#characterId2").val(),
@@ -78,6 +83,7 @@ $(function () {
     });
 
     $("#delete-button").click(function () {
+        // JD: 16
         $.ajax({
             type: 'DELETE',
             url: "http://lmu-diabolical.appspot.com/characters/" + $("#deleteCharacter").val(),
