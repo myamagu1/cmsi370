@@ -1,0 +1,66 @@
+%
+% latex-sample.tex
+%
+% This LaTeX source file provides a template for a typical research paper.
+%
+
+%
+% Use the standard article template.
+%
+\documentclass{article}
+
+% The geometry package allows for easy page formatting.
+\usepackage{geometry}
+\geometry{letterpaper}
+
+% Load up special logo commands.
+\usepackage{doc}
+
+% Package for formatting URLs.
+\usepackage{url}
+
+% Packages and definitions for graphics files.
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%
+% Set the title, author, and date.
+%
+\title{Assignment 1124}
+\author{Mondo Yamaguchi}
+\date{11/24/2015}
+
+%
+% The document proper.
+%
+\begin{document}
+
+% Add the title section.
+\maketitle
+
+
+\section{Concept}
+Google Translate + 
+\label{Concept}
+
+
+\section{Scenario 1}
+\label{Scenario 1}
+Interview 
+%\subsection{subsection}
+
+\section{Scenario 2}
+\label{Scenario 2}
+Watching a TV show in another country
+
+\section{Conclusion}
+
+
+\pagebreak
+
+\begin{thebibliography} {1}
+
+\end{thebibliography}
+
+\end{document}
