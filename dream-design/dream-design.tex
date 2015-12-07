@@ -7,7 +7,7 @@
 %
 % Use the standard article template.
 %
-\documentclass{article}
+\documentclass[100pt]{article}
 
 % The geometry package allows for easy page formatting.
 \usepackage{geometry}
@@ -27,9 +27,9 @@
 %
 % Set the title, author, and date.
 %
-\title{Assignment 1124}
-\author{Mondo Yamaguchi}
-\date{11/24/2015}
+\title{\Large{Assignment 1210}}
+\author{\Large{Mondo Yamaguchi}}
+\date{\Large{12/10/2015}}
 
 %
 % The document proper.
@@ -40,9 +40,16 @@
 \maketitle
 
 
-\section{Concept}
-Google Translate + 
+\section{\Large{Concept}}
+\large{I have put together a front end for the LMU Diabolical web service for my dream interface. The diabolical simulates a hypothetical role-playing game backed by Google App Engine. For this very simple web service, I have implemented five non-trivial functions: Display a list of current characters, create a new character, view a character, modify a character and delete a character. 
+\\\\
+For the display of a characters list function, I put the list into a table that utilizes striped rows to add zebra-striping. When the user presses the show button, the table pops up on the screen. Because of zebra-striping, the user can easily see each character's six identities such as character ID, name, gender, level, class type, and money. There is also the hide button to put the table away. For creating a new character function, I built six boxes for each of a character's identities and placed the create button. The box has two labels, one on the top of the box and the other inside the box, to make sure the user does not make a mistake while he/she inputs character's identities. The box flashes once the user presses it, which is one important feature of this component to improve the user's efficiency and minimize the user's error. After the user inputs a character's identities, the user can click the create button to generate the character, and the user gets an alert for the character the user just created. For view a character function, the user can search a character by a character's id and gets a table of the specific character the user wants. I implemented a box for the input of a character's id and two boxes for displaying and hiding the user's search result. The interface for modifying a character function looks the same as the create a new character function. This function modifies a character's identities instead of creating a new character. Similarly, the interface for the deleting a character function looks the same as the viewing a character function. This function instead delete a character. Lastly, the spawn a random item function generates a new random character. I have two input boxes and the spawn button. When the user inputs a level and a slot and presses the spawn button, the function creates a random character.
+\\\\
+
+}
 \label{Concept}
+
+%Talk about button features.
 
 
 \section{Scenario 1}
