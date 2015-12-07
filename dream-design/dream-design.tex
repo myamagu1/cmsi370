@@ -47,7 +47,7 @@ I have put together a front end for the LMU Diabolical web service for my dream 
 
 \section{\Large{Description of the five functions}}
 \large{
-For the display of a characters list function, I put the list into a table that utilizes striped rows to add zebra-striping. When the user presses the show button, the table pops up on the screen. Because of zebra-striping, the user can easily see each character's six identities such as character ID, name, gender, level, class type, and money. There is also the hide button to put the table away. For the creating a new character function, I built six boxes for each of a character's identities and placed the create button. The box has two labels, one on the top of the box and the other inside the box, to make sure the user does not make a mistake while he/she inputs character's identities. The box flashes once the user presses it, which is an important feature of this component to improve the user's efficiency and minimize the user's error. After the user inputs a character's identities, the user can click the create button to generate the new character, and the user gets an alert that shows information of the new character. For the view a character function, the user can search a character by a character's id and gets a table of the specific character the user wants. I implemented a box for the input of a character's id and two boxes for displaying and hiding the user's search result. The interface for the modifying a character function looks the same as the create a new character function. This function modifies a character's identities instead of creating a new character. Similarly, the interface for the deleting a character function looks the same as the viewing a character function. This function instead delete a character. Lastly, the spawn a random item function generates a new random character. I have two input boxes and the spawn button. When the user inputs a level and a slot and presses the spawn button, the function creates a random character.
+For the display of a characters list function, I put the list into a table that utilizes striped rows to add zebra-striping. When the user presses the show button, the table pops up on the screen. Because of zebra-striping, the user can easily see each character's six identities (character ID, name, gender, level, class type, and money). There is also the hide button to put the table away. For the creating a new character function, I built six boxes for each of a character's identities and placed the create button. The box has two labels, one on the top of the box and the other inside the box, to make sure the user does not make a mistake while he/she inputs character's identities. The box flashes once the user presses it, which is an important feature of this component to improve the user's efficiency and minimize the user's error. After the user inputs a character's identities, the user can click the create button to generate the new character, and the user gets an alert that shows information of the new character. For the view a character function, the user can search a character by a character's id and gets a table of the specific character the user wants. I implemented a box for the input of a character's id and two boxes for displaying and hiding the user's search result. The interface for the modifying a character function looks the same as the create a new character function. This function modifies a character's identities instead of creating a new character. Similarly, the interface for the deleting a character function looks the same as the viewing a character function. This function instead delete a character. Lastly, the spawn a random item function generates a new random character. I have two input boxes and the spawn button. When the user inputs a level and a slot and presses the spawn button, the function creates a random character.
 \\\\
 In addition, when the user hovers over any buttons, it triggers an action that let the user know he/she can press the button. 
 
@@ -71,14 +71,16 @@ The user can create a new character by inputing his/her character's information 
 The user can search any character on the list by inputing a character ID into the view a character function. Then, he/she can delete a character by putting a character ID into the deleting a character function and hitting the delete button. 
 }
 
+\section{Principle}
+I have utilized Ben Shneiderman's "Eight Golden Rules of Interface Design" as a guide in order to develop my front end for the Diabolical web service. The interface only contains two types of component and only one type of input box and button are used to keep its consistency (Strive for consistency). Every button reacts when the user hover over them (Offer informative feedback) and it gives an alert each time the user plays an action to confirm what he/she has done (Design dialog to yield closure). The modifying a character and the deleting a character functions let the user to change or delete a character in case he/she unintentionally created a character (Offer simple error handling). Finally, all the functions are kept simple for the user (Reduce short-term memory load).
 
 \section{Conclusion}
-
+My front end for the LMU Diabolical web 
 
 \pagebreak
 
 \begin{thebibliography} {1}
-
+http://myweb.lmu.edu/dondi/share/ixd/principles.pdf
 \end{thebibliography}
 
 \end{document}
