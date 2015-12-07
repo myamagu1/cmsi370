@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.5.24)  7 DEC 2015 00:39
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.5.24)  7 DEC 2015 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,7 +275,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
  [3]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 84.
+LaTeX Warning: Empty `thebibliography' environment on input line 83.
 
 [4] (./dream-design.aux) )
 (\end occurred inside a group at level 1)
@@ -291,4 +291,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  42i,7n,21p,1894b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dream-design.dvi (4 pages, 6564 bytes).
+Output written on dream-design.dvi (4 pages, 7108 bytes).
