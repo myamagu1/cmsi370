@@ -1,19 +1,40 @@
 (function ($) {
+    var drawingArea = {
+        marginLeft: $("#drawing-area").css("marginLeft"),
+        marginTop: $("#drawing-area").css("marginTop"),
+        width: $("#drawing-area").width(),
+        height: $("#drawing-area").height()
+    };
     /**
      * Tracks a box as it is rubberbanded or moved across the drawing area.
      */
-    var trackDrag = function (event) {
+    var trackDrag: function (event) {
         $.each(event.changedTouches, function (index, touch) {
             // Don't bother if we aren't tracking anything.
+            var boxWidth = $("#boxA").width();
+            var boxHeight = $("#boxA").height();
+
+            var currentBox = {
+                left: touch.pageX-touch.target.deltaX,
+                top: touch.pageY-touch.target.deltaY,
+                right: touch.pageX-touch.target.deltaX + boxWidth,
+                bottom: touch.pageY-touch.target.deltaY + boxHeight
+            };
             if (touch.target.movingBox) {
-                // Reposition the object.
-                touch.target.movingBox.offset({
+                if (currentBox.left > 100) {
+                    touch.target.movingBox.offset({
                     left: touch.pageX - touch.target.deltaX,
-                    top: touch.pageY - touch.target.deltaY
-                });
+                    });
+                }
+                
+                if (currentBox.top > 100) {
+                    touch.target.movingBox.offset({
+                        top: touch.pageY - touch.target.deltaY
+                    });
+                }
             }
         });
-
+        
         // Don't do any touch scrolling.
         event.preventDefault();
     };
@@ -21,7 +42,7 @@
     /**
      * Concludes a drawing or moving sequence.
      */
-    var endDrag = function (event) {
+    var endDrag: function (event) {
         $.each(event.changedTouches, function (index, touch) {
             if (touch.target.movingBox) {
                 // Change state to "not-moving-anything" by clearing out
@@ -34,14 +55,14 @@
     /**
      * Indicates that an element is unhighlighted.
      */
-    var unhighlight = function () {
+    var unhighlight: function () {
         $(this).removeClass("box-highlight");
     };
 
     /**
      * Begins a box move sequence.
      */
-    var startMove = function (event) {
+    var startMove: function (event) {
         $.each(event.changedTouches, function (index, touch) {
             // Highlight the element.
             $(touch.target).addClass("box-highlight");
@@ -65,7 +86,7 @@
     /**
      * Sets up the given jQuery collection as the drawing area(s).
      */
-    var setDrawingArea = function (jQueryElements) {
+    var setDrawingArea: function (jQueryElements) {
         // Set up any pre-existing box elements for touch behavior.
         jQueryElements
             .addClass("drawing-area")
@@ -83,7 +104,21 @@
             });
     };
 
-    $.fn.boxesTouch = function () {
-        setDrawingArea(this);
+    var lastTimestamp = 0;
+    var FRAME_RATE = 10;
+    var MS_BETWEEN_FRAMES = 1000 / FRAME_RATE;
+    var updateBoxPositions = function (timestamp) {
+        if (timestamp - lastTimestamp > MS_BETWEEN_FRAMES) {
+            lastTimestamp = timestamp;
+        }
+        window.requestAnimationFrame(updateBoxPositions);
     };
-}(jQuery));
+
+    $.fn.boxesTouch = funtion () {
+        var element = $("#drawing-area");
+        var elementOffset = element.offset();
+
+        setDrawingArea(this);
+        window.requestAnimationFrame(updateBoxPositions);
+    };
+} (jQuery));
