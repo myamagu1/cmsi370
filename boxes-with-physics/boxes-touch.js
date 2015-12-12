@@ -106,13 +106,23 @@
                     element.velocity.x *= -1;
                 }
 
-                // if ((element.offsetLeft + element.offsetWidth) >= index.offsetWidth {
-                //     element.velocity.x *= -1;
-                // }
+                if ($(window).width() - (element.offsetLeft - 120) < 0) {
+                    element.velocity.x *= -1;
+                }
 
                 if (element.offsetTop <= 0 && element.velocity.y < 0) {
                     element.velocity.y *= -1;
                 }
+
+
+                if ($(window).height() - (element.offsetTop + 58) < 0) {
+                    element.velocity.y *= -1;
+                }
+
+
+                // if ((element.offsetTop + element.offsetWidth) <= offset.offsetWidth) {
+                //     element.velocity.y *= -1;
+                // }
             });
 
 
