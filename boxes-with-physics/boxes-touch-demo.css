@@ -1,5 +1,6 @@
 #drawing-area {
-    border: 3px solid black;
+    border: 3px solid blue;
     width: 555px;
     height: 555px;
+    background-color: lavender;
 }
