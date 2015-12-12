@@ -106,4 +106,6 @@ $(function () {
             }
         );
     });
+
+    $(".trash-handle").trashable();
 });
