@@ -107,5 +107,9 @@ $(function () {
         );
     });
 
-    $(".trash-handle").trashable();
+    $(".trash-handle").trashable({
+        trashCallback: function () {
+            alert($("#deleteCharacter").val() + " will be deleted!");
+        }
+    });
 });

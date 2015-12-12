@@ -7,11 +7,17 @@
 	};
 
 	var dragCleanUp = function (event) {
+		var options = dragCan.data('options');
+		if (options && options.trashCallback) {
+			options.trashCallback();
+		}
+
 		dragCan.remove();
+
 		$("body").unbind("mousemove", dragHandler);
 	}
 
-	$.fn.trashable = function () {
+	$.fn.trashable = function (options) {
 		this.mousedown(function (event) {
 			dragCan = $(event.target).clone()
 				.addClass("can-being-dragged")
@@ -21,6 +27,7 @@
 				.append(dragCan)
 				.mousemove(dragHandler);
 
+			dragCan.data({options: options});
 			dragCan.mouseup(dragCleanUp);
 		});		
 	};
