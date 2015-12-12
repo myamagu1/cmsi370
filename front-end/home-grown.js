@@ -109,7 +109,13 @@ $(function () {
 
     $(".trash-handle").trashable({
         trashCallback: function () {
-            alert($("#deleteCharacter").val() + " will be deleted!");
-        }
+            $.ajax({
+            type: 'DELETE',
+            url: "http://lmu-diabolical.appspot.com/characters/" + $("#deleteCharacter").val(),
+            success: function (data, textStatus, jqXHR) {
+                console.log("Gone baby gone.");
+            }
+        });
+    }
     });
 });
