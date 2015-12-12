@@ -157,8 +157,8 @@
                 "y: " + event.accelerationIncludingGravity.y);
 
             $("div.box").each(function (index, element) {
-                element.acceleration.x = event.accelerationIncludingGravity.x /100000;
-                element.acceleration.y = -event.accelerationIncludingGravity.y /100000;
+                element.acceleration.x = event.accelerationIncludingGravity.x /500000;
+                element.acceleration.y = -event.accelerationIncludingGravity.y /500000;
             });
         });
     };
