@@ -8,7 +8,7 @@
 
 	var dragCleanUp = function (event) {
 		var options = dragCan.data('options');
-		if (options && options.trashCallback) {
+		if (options && $.isFunction(options.trashCallback)) {
 			options.trashCallback();
 		}
 
