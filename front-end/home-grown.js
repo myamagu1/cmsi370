@@ -107,10 +107,10 @@ $(function () {
         );
     });
 
-    $(".trash-handle").trashable({
-        trashCallback: function () {
+    $(".trash-handle").trashable({ // JD 1211: 3
+        trashCallback: function () { // JD: 1211: 4
             $.ajax({
-            type: 'DELETE',
+            type: 'DELETE', // JD 1211: 5
             url: "http://lmu-diabolical.appspot.com/characters/" + $("#deleteCharacter").val(),
             success: function (data, textStatus, jqXHR) {
                 console.log("Gone baby gone.");

@@ -1,4 +1,4 @@
-(function ($) {
+(function ($) { // JD: 2
 
 	var dragCan;
 
