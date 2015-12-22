@@ -62,7 +62,7 @@
         // Eat up the event so that the drawing area does not
         // deal with it.
         event.stopPropagation();
-    };
+    }; // JD: 2
 
     /**
      * Sets up the given jQuery collection as the drawing area(s).
@@ -88,7 +88,7 @@
     };
 
     var lastTimeStamp = 0;
-    var FRAME_RATE = 10;
+    var FRAME_RATE = 10; // JD: 3
     var MS_BETWEEN_FRAMES = 1000 / FRAME_RATE;
     var updateBoxes = function (timestamp) {
         var timePassed = timestamp - lastTimeStamp;
@@ -100,13 +100,14 @@
 
                 element.velocity.x += element.acceleration.x * timePassed;
                 element.velocity.y += element.acceleration.y * timePassed;
-                $(element).offset(offset);
+                $(element).offset(offset); // JD: 7
 
+                // JD: 4
                 if (element.offsetLeft <= 0 && element.velocity.x < 0) {
                     element.velocity.x *= -1;
                 }
 
-                if ($(window).width() - (element.offsetLeft - 120) < 0) {
+                if ($(window).width() - (element.offsetLeft - 120) < 0) { // JD: 5, 9
                     element.velocity.x *= -1;
                 }
 
@@ -115,11 +116,12 @@
                 }
 
 
-                if ($(window).height() - (element.offsetTop + 58) < 0) {
+                if ($(window).height() - (element.offsetTop + 58) < 0) { // JD: 9
                     element.velocity.y *= -1;
-                }
+                } // JD: 6
 
 
+                // JD: 8
                 // if ((element.offsetTop + element.offsetWidth) <= offset.offsetWidth) {
                 //     element.velocity.y *= -1;
                 // }
@@ -127,6 +129,7 @@
 
 
             lastTimeStamp = timestamp;
+            // JD: 8
     //         $("#timestamp").text(delta);
 
     //         // Move the boxes... on. Their. Own!!!
@@ -157,8 +160,8 @@
                 "y: " + event.accelerationIncludingGravity.y);
 
             $("div.box").each(function (index, element) {
-                element.acceleration.x = event.accelerationIncludingGravity.x /500000;
-                element.acceleration.y = -event.accelerationIncludingGravity.y /500000;
+                element.acceleration.x = event.accelerationIncludingGravity.x /500000; // JD: 9
+                element.acceleration.y = -event.accelerationIncludingGravity.y /500000; // JD: 9
             });
         });
     };
